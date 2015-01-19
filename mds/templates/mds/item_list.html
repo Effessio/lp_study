@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <ul>
+    {% for item in object_list %}
+        <li>{{ item.name }} <span>{{ item.quantity }}</span><a href={% url 'increase_count' item.id %}> + </a></li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
